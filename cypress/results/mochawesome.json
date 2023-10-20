@@ -1,0 +1,225 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-10-20T20:56:53.900Z",
+    "end": "2023-10-20T20:57:33.603Z",
+    "duration": 39703,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fa0cd9a2-392f-4c5f-826b-f37668204648",
+      "title": "",
+      "fullFile": "cypress\\e2e\\testes.cy.js",
+      "file": "cypress\\e2e\\testes.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8fe6c9a8-b473-4fea-8628-0ede14b7c341",
+          "title": "Teste Técncico Onfly",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "e3f62cff-b4e6-422b-bb88-2a42b30ef9fb",
+              "title": "Cadastro",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Cadastro com Sucesso",
+                  "fullTitle": "Teste Técncico Onfly Cadastro Cadastro com Sucesso",
+                  "timedOut": null,
+                  "duration": 16475,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Clicar botão cadastro\ncy.get('.fa.fa-lock').click();\n//Aguardar carregamento da tela\ncy.espera_elemento('.account_form');\n//Preencher campos de cadastro\ncy.get('#user').type(testname);\ncy.get('#email').type(testname + '@teste.com');\ncy.get('#password').type('senha' + testname);\n//Clicar botão cadastrar\ncy.get('#btnRegister').click();\n//Validação de cadastro com sucesso  \ncy.get('#swal2-title').should('be.visible').should('have.text', 'Cadastro realizado!');",
+                  "err": {},
+                  "uuid": "e3a045a0-0462-43e4-b9ce-c533f4690840",
+                  "parentUUID": "e3f62cff-b4e6-422b-bb88-2a42b30ef9fb",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Login com Sucesso",
+                  "fullTitle": "Teste Técncico Onfly Cadastro Login com Sucesso",
+                  "timedOut": null,
+                  "duration": 4384,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Clicar em Login\ncy.get('.fa.fa-user').click();\n//Aguardar carregamento da tela\ncy.espera_elemento('.account_form');\n//Preencher campos de login\ncy.get('#user').type(testname + '@teste.com');\ncy.get('#password').type('senha' + testname);\n//Clicar botão login\ncy.get('#btnLogin').click();\n//Validação de login com sucesso  \ncy.get('#swal2-title').should('be.visible').should('have.text', 'Login realizado');",
+                  "err": {},
+                  "uuid": "d7b5b8ef-e78e-4c4b-bae2-0be88692bd53",
+                  "parentUUID": "e3f62cff-b4e6-422b-bb88-2a42b30ef9fb",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Logout com Sucesso",
+                  "fullTitle": "Teste Técncico Onfly Cadastro Logout com Sucesso",
+                  "timedOut": null,
+                  "duration": 3798,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Realizar login\ncy.login(testname, testname);\n//Clicar em lougout\ncy.get('.nav > :nth-child(6) > a').click();\n//Validação de logout com sucesso  \ncy.get('#swal2-title').should('be.visible').should('have.text', 'Logout Sucessfull');",
+                  "err": {},
+                  "uuid": "cf2f0dfa-7cfa-41ff-86cb-284f65bba563",
+                  "parentUUID": "e3f62cff-b4e6-422b-bb88-2a42b30ef9fb",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "e3a045a0-0462-43e4-b9ce-c533f4690840",
+                "d7b5b8ef-e78e-4c4b-bae2-0be88692bd53",
+                "cf2f0dfa-7cfa-41ff-86cb-284f65bba563"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 24657,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "29fec334-78ad-4766-a7f8-1a09c9323868",
+              "title": "Compra",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Adicionar produto ao carrinho",
+                  "fullTitle": "Teste Técncico Onfly Compra Adicionar produto ao carrinho",
+                  "timedOut": null,
+                  "duration": 8797,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Selecionar Produto\ncy.get('#video > .row > :nth-child(1) > .product_item_two > .product_detail > .product_title > a').click();\n//Clicar em add to cart\ncy.get('.theme-btn-one.btn-black-overlay.btn_sm').click();\n//Validação de produto adicionado\ncy.get('#swal2-title').should('be.visible').should('have.text', 'Sucess!');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#swal2-title`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#swal2-title`, but never found it.\n    at Context.eval (webpack://teste-onfly/./cypress/e2e/testes.cy.js:95:9)",
+                    "diff": null
+                  },
+                  "uuid": "b2445b44-0df5-498b-9f7c-ef5b03d63cab",
+                  "parentUUID": "29fec334-78ad-4766-a7f8-1a09c9323868",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Finalizar compra",
+                  "fullTitle": "Teste Técncico Onfly Compra Finalizar compra",
+                  "timedOut": null,
+                  "duration": 6047,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Clicar em carrinho\ncy.get('.col-12 > .header-action-link > :nth-child(2) > .offcanvas-toggle > .fa').click();\n//Clicar em checkout\ncy.get('.offcanvas-cart-action-button > :nth-child(2) > .theme-btn-one').click();\n//Preencher campos de compra\ncy.get('#fname').type('primeiro ' + testname);\ncy.get('#lname').type('ultimo ' + testname);\ncy.get('#cname').type('empresa ' + testname);\ncy.get('#email').type(testname + '@teste.com');\ncy.get('select[id=\"country\"]').select('usa');\ncy.get('select[id=\"city\"]').select('Aland Islands');\ncy.get('#zip').type(num);\ncy.get('#faddress').type('endereco ' + testname);\ncy.get('#messages').type('observacao ' + testname);\n//Clicar em save\ncy.get('.checkout-area-bg > .theme-btn-one').click();\n//Clicar em place order\ncy.get(':nth-child(2) > :nth-child(2) > .theme-btn-one').click();\n//Validação de produto adicionado\ncy.get('.offer_modal_left').should('be.visible');\ncy.get('h2').should('have.text', 'Order success!');",
+                  "err": {},
+                  "uuid": "de372980-fbe6-45da-87f5-190b3da3a367",
+                  "parentUUID": "29fec334-78ad-4766-a7f8-1a09c9323868",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "de372980-fbe6-45da-87f5-190b3da3a367"
+              ],
+              "failures": [
+                "b2445b44-0df5-498b-9f7c-ef5b03d63cab"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 14844,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
